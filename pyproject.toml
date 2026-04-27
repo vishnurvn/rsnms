@@ -12,6 +12,7 @@ dependencies = [
 dev = [
     "maturin>=1.13.1",
     "pytest>=9.0.3",
+    "pytest-benchmark>=5.2.3",
 ]
 
 [build-system]
@@ -22,7 +23,7 @@ build-backend = "maturin"
 features = ["pyo3/extension-module"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests/py"]
+testpaths = ["tests/py/tests.py"]
 
 [tool.basedpyright]
 pythonVersion = "3.13"
