@@ -1,0 +1,30 @@
+[project]
+name = "rsnms"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "numpy>=2.4.4",
+]
+
+[dependency-groups]
+dev = [
+    "maturin>=1.13.1",
+    "pytest>=9.0.3",
+]
+
+[build-system]
+requires = ["maturin>=1.4"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/py"]
+
+[tool.basedpyright]
+pythonVersion = "3.13"
+include = ["python", "tests"]
+stubPath = "python"

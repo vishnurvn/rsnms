@@ -1,0 +1,20 @@
+[package]
+name = "rsnms"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "rsnms"
+crate-type = ["cdylib", "rlib"]
+
+[[test]]
+name = "tests"
+path = "tests/rs/tests.rs"
+
+[dependencies]
+ndarray = "0.17.2"
+numpy = "0.28.0"
+pyo3 = {version = "0.28.3", features = ["extension-module"]}
+
+[dev-dependencies]
+rstest = "0.21"
